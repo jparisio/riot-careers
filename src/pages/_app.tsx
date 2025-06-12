@@ -11,19 +11,21 @@ export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   useEffect(() => {
-    // if (typeof window !== "undefined") {
-    //   window.history.scrollRestoration = "manual";
-    // }
+    if (typeof window !== "undefined") {
+      window.history.scrollRestoration = "manual";
+    }
 
     // Initialize Lenis
     const lenis = new Lenis({
       autoRaf: true,
     });
 
+    console.log("Current scroll position:", window.scrollY);
+
     // Listen for the scroll event and log the event data
-    lenis.on("scroll", (e) => {
-      console.log(e);
-    });
+    // lenis.on("scroll", (e) => {
+    //   console.log(e);
+    // });
 
     return () => {
       lenis.destroy();

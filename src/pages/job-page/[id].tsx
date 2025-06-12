@@ -19,11 +19,18 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
 }
 
 export default function Page({ job }: { job: JobType }) {
+  const router = useRouter();
+
   useEffect(() => {
-    return () => {
-      window.scrollTo(0, 0);
+    const handleRouteChangeStart = () => {
+      window.scrollTo(0, 0); // No animation = happens immediately
     };
-  }, []);
+
+    router.events.on("routeChangeStart", handleRouteChangeStart);
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChangeStart);
+    };
+  }, [router.events]);
 
   return (
     <>
@@ -32,12 +39,12 @@ export default function Page({ job }: { job: JobType }) {
           <AnimText text={job.project.toUpperCase()} offset={0.2} />
         </h1>
         <h3 className="text-lg font-bold text-foreground">
-          <AnimText text={job.location} offset={0.3} />
+          <AnimText text={job.location.toUpperCase()} offset={0.3} />
         </h3>
         <h3 className="text-lg mb-12 font-bold text-foreground">
-          <AnimText text={`JOB ID: ${job.id}`} offset={0.3} />
+          <AnimText text={`JOB ID: REQ${job.id}`} offset={0.3} />
         </h3>
-        <p className="text-lg text-foreground">
+        <p className="text-lg text-foreground max-w-3xl">
           <AnimText
             text="Join our passionate team of innovators and engineers to help shape the future of gaming through cutting-edge technology, creative collaboration, and a relentless drive to deliver unforgettable experiences."
             offset={0.3}
