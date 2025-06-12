@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "project": "Art Lead, Concept Art - VALORANT, Characters",
+    "category": "Art",
+    "client": "VALORANT",
+    "location": "Los Angeles",
+    "link": "https://www.riotgames.com/en/work-with-us/jobs"
+  },
+  {
+    "id": 2,
+    "project": "Senior Software Engineer - League of Legends",
+    "category": "Engineering",
+    "client": "League of Legends",
+    "location": "Los Angeles",
+    "link": "https://www.riotgames.com/en/work-with-us/jobs"
+  },
+  {
+    "id": 3,
+    "project": "Game Designer - Teamfight Tactics",
+    "category": "Design",
+    "client": "Teamfight Tactics",
+    "location": "Los Angeles",
+    "link": "https://www.riotgames.com/en/work-with-us/jobs"
+  },
+  {
+    "id": 4,
+    "project": "Product Manager - Legends of Runeterra",
+    "category": "Product",
+    "client": "Riot Games",
+    "location": "Los Angeles",
+    "link": "https://www.riotgames.com/en/work-with-us/jobs"
+  },
+  {
+    "id": 5,
+    "project": "Technical Artist - Wild Rift",
+    "category": "Art",
+    "client": "League of Legends",
+    "location": "Los Angeles",
+    "link": "https://www.riotgames.com/en/work-with-us/jobs"
+  },
+  {
+    "id": 6,
+    "project": "Data Scientist - Player Experience",
+    "category": "Analytics",
+    "client": "Riot Games",
+    "location": "Los Angeles",
+    "link": "https://www.riotgames.com/en/work-with-us/jobs"
+  },
+  {
+    "id": 7,
+    "project": "UX Designer - Riot Client",
+    "category": "Design",
+    "client": "Riot Games",
+    "location": "Los Angeles",
+    "link": "https://www.riotgames.com/en/work-with-us/jobs"
+  },
+  {
+    "id": 8,
+    "project": "Backend Engineer - Anti-Cheat",
+    "category": "Engineering",
+    "client": "VALORANT",
+    "location": "Los Angeles",
+    "link": "https://www.riotgames.com/en/work-with-us/jobs"
+  },
+  {
+    "id": 9,
+    "project": "3D Character Artist - Arcane",
+    "category": "Art",
+    "client": "League of Legends",
+    "location": "Los Angeles",
+    "link": "https://www.riotgames.com/en/work-with-us/jobs"
+  },
+  {
+    "id": 10,
+    "project": "Esports Producer - LCS",
+    "category": "Esports",
+    "client": "League of Legends",
+    "location": "San Francisco",
+    "link": "https://www.riotgames.com/en/work-with-us/jobs"
+  },
+  {
+    "id": 11,
+    "project": "QA Engineer - VALORANT",
+    "category": "Quality Assurance",
+    "client": "VALORANT",
+    "location": "San Francisco",
+    "link": "https://www.riotgames.com/en/work-with-us/jobs"
+  },
+  {
+    "id": 12,
+    "project": "Audio Designer - League of Legends",
+    "category": "Audio",
+    "client": "League of Legends",
+    "location": "San Francisco",
+    "link": "https://www.riotgames.com/en/work-with-us/jobs"
+  },
+  {
+    "id": 13,
+    "project": "DevOps Engineer - Platform Services",
+    "category": "Engineering",
+    "client": "Riot Games",
+    "location": "San Francisco",
+    "link": "https://www.riotgames.com/en/work-with-us/jobs"
+  },
+  {
+    "id": 14,
+    "project": "Community Manager - EMEA",
+    "category": "Community",
+    "client": "Riot Games",
+    "location": "San Francisco",
+    "link": "https://www.riotgames.com/en/work-with-us/jobs"
+  },
+  {
+    "id": 15,
+    "project": "VFX Artist - Teamfight Tactics",
+    "category": "Art",
+    "client": "Teamfight Tactics",
+    "location": "San Francisco",
+    "link": "https://www.riotgames.com/en/work-with-us/jobs"
+  },
+  {
+    "id": 16,
+    "project": "Security Engineer - Infrastructure",
+    "category": "Security",
+    "client": "Riot Games",
+    "location": "San Francisco",
+    "link": "https://www.riotgames.com/en/work-with-us/jobs"
+  },
+  {
+    "id": 17,
+    "project": "Localization Specialist - Wild Rift",
+    "category": "Localization",
+    "client": "League of Legends",
+    "location": "San Francisco",
+    "link": "https://www.riotgames.com/en/work-with-us/jobs"
+  },
+  {
+    "id": 18,
+    "project": "Machine Learning Engineer - Behavioral Systems",
+    "category": "Engineering",
+    "client": "Riot Games",
+    "location": "San Francisco",
+    "link": "https://www.riotgames.com/en/work-with-us/jobs"
+  },
+  {
+    "id": 19,
+    "project": "Brand Designer - Riot Forge",
+    "category": "Design",
+    "client": "2XKO",
+    "location": "San Francisco",
+    "link": "https://www.riotgames.com/en/work-with-us/jobs"
+  },
+  {
+    "id": 20,
+    "project": "Gameplay Engineer - Project L",
+    "category": "Engineering",
+    "client": "2XKO",
+    "location": "San Francisco",
+    "link": "https://www.riotgames.com/en/work-with-us/jobs"
+  }
+]
