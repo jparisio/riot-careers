@@ -161,10 +161,10 @@ export default function Page({ job }: { job: JobType }) {
           >
             {/* Sliding black div */}
             <motion.div
-              className="absolute inset-0 bg-black h-24 w-24"
+              className="absolute inset-x-[-10] bottom-0 bg-black h-24 w-180%"
               initial={{ y: "100%", rotate: 0 }}
               animate={{
-                y: hovered ? "-10%" : "100%",
+                y: hovered ? "10%" : "100%",
                 rotate: hovered ? 5 : 0,
               }}
               transition={{ duration: 0.5, ease: "easeOut" }}
