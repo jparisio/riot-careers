@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Lenis from "lenis";
 import Navbar from "@/components/Navbar";
 import "@/styles/globals.css";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import { useResetOnMount } from "@/hooks/useResetOnMount";
@@ -43,8 +43,11 @@ export default function App({ Component, pageProps }: AppProps) {
         window.scrollTo(0, 0);
       }}
     >
-      <Navbar key={`navbar-${router.asPath}`} />
-      <Component {...pageProps} key={router.asPath} />
+      <motion.div key={router.asPath}>
+        <Navbar />
+
+        <Component {...pageProps} />
+      </motion.div>
     </AnimatePresence>
   );
 }

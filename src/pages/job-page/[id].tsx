@@ -23,7 +23,7 @@ export default function Page({ job }: { job: JobType }) {
 
   useEffect(() => {
     const handleRouteChangeStart = () => {
-      window.scrollTo(0, 0); // No animation = happens immediately
+      window.scrollTo(0, 0);
     };
 
     router.events.on("routeChangeStart", handleRouteChangeStart);
