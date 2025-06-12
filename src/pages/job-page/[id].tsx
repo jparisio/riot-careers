@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import jobs from "@/data/jobs.json";
 import JobType from "@/types/job";
+import { useLenis } from "@/context/LenisProvider";
 
 export async function getStaticPaths() {
   return {
@@ -20,10 +21,12 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
 
 export default function Page({ job }: { job: JobType }) {
   const router = useRouter();
+  const lenis = useLenis();
 
   useEffect(() => {
+    if (!lenis) return;
     const handleRouteChangeStart = () => {
-      window.scrollTo(0, 0);
+      lenis.scrollTo(0);
     };
 
     router.events.on("routeChangeStart", handleRouteChangeStart);
@@ -147,10 +150,13 @@ export default function Page({ job }: { job: JobType }) {
           </section>
         </div>
 
-        <div className="w-full flex items-center justify-center mt-22">
-          <button className="rounded-4xl p-4 bg-riotred text-background w-1/4 overflow-hidden">
+        <div className="w-full flex items-center justify-center flex-col mt-22">
+          <button className="rounded-4xl p-4 bg-riotred text-background w-1/4 overflow-hidden ">
             / Apply
           </button>
+          <p className="text-xs text-foreground mt-4">
+            (honestly dont bother applying unless u go to uwaterloo)
+          </p>
         </div>
       </div>
     </>
