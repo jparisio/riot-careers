@@ -1,5 +1,6 @@
+import { motion } from "framer-motion";
 import AnimText from "@/components/AnimText";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import jobs from "@/data/jobs.json";
 import JobType from "@/types/job";
@@ -34,6 +35,8 @@ export default function Page({ job }: { job: JobType }) {
       router.events.off("routeChangeStart", handleRouteChangeStart);
     };
   }, [router.events]);
+
+  const [hovered, setHovered] = useState(false);
 
   return (
     <>
@@ -151,8 +154,24 @@ export default function Page({ job }: { job: JobType }) {
         </div>
 
         <div className="w-full flex items-center justify-center flex-col mt-22">
-          <button className="rounded-4xl p-4 bg-riotred text-background w-1/4 overflow-hidden ">
-            / Apply
+          <button
+            className="relative rounded-4xl p-4 bg-riotred text-background w-1/4 overflow-hidden"
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+          >
+            {/* Sliding black div */}
+            <motion.div
+              className="absolute inset-0 bg-black h-24"
+              initial={{ y: "100%", rotate: 0 }}
+              animate={{
+                y: hovered ? "-10%" : "100%",
+                rotate: hovered ? 5 : 0,
+              }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            />
+
+            {/* Button text - keep it above the sliding div */}
+            <span className="relative z-10">/ Apply</span>
           </button>
           <p className="text-xs text-foreground mt-4">
             (honestly dont bother applying unless u go to uwaterloo)
