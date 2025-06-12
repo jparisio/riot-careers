@@ -36,7 +36,7 @@ export default function AnimText({
                 y: "-120%",
                 transition: {
                   // delay: (words.length - , Reverse delay for exit
-                  delay: index * 0.01,
+                  // delay: index * 0.01,
                   duration: 1.2,
                   ease: [0.76, 0, 0.24, 1],
                 },
