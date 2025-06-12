@@ -96,8 +96,8 @@ export default function Job({ project, index }: JobProps) {
       .start({
         top: 0,
         left: 0,
-        width: viewport.width,
-        height: viewport.height,
+        width: window.innerWidth,
+        height: window.innerHeight,
         transition: {
           duration: 0.75,
           ease: [0.76, 0, 0.24, 1],
