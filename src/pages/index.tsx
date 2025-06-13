@@ -3,8 +3,15 @@ import Job from "@/components/Job";
 import AnimText from "@/components/AnimText";
 import FilterBar from "@/components/FilterBar";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
+import { useLenis } from "@/context/LenisProvider";
 
 export default function Home() {
+  const lenis = useLenis();
+  useEffect(() => {
+    lenis?.start();
+  }, []);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-center md:p-24 sm:p-0.5 mt-28 sm:mt-28 md:mt-0 relative">
       <h1 className="text-6xl font-bold mb-1 text-[#2b2a29]">

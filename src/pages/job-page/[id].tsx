@@ -5,7 +5,6 @@ import jobs from "@/data/jobs.json";
 import JobType from "@/types/job";
 import AnimText from "@/components/AnimText";
 import { useLenis } from "@/context/LenisProvider";
-import Image from "next/image";
 
 export async function getStaticPaths() {
   return {
@@ -27,8 +26,10 @@ export default function Page({ job }: { job: JobType }) {
 
   useEffect(() => {
     if (!lenis) return;
+    lenis?.start();
 
     const handleRouteChangeStart = () => {
+      // lenis.stop();
       lenis.scrollTo(0);
     };
 

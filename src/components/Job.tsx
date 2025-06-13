@@ -5,6 +5,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useRouter } from "next/router";
 import AnimText from "./AnimText";
 import JobType from "@/types/job";
+import { useLenis } from "@/context/LenisProvider";
 
 interface JobProps {
   project: JobType;
@@ -74,13 +75,14 @@ export default function Job({ project, index }: JobProps) {
   }, []);
 
   const router = useRouter();
+  const lenis = useLenis();
   const handleClick = () => {
     if (!linkRef.current) return;
     const bounds = linkRef.current.getBoundingClientRect();
 
     document.body.style.pointerEvents = "none";
     linkRef.current.style.zIndex = "11";
-
+    lenis?.stop();
     bgControls.set({
       top: bounds.top,
       left: bounds.left,
