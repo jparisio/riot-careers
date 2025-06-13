@@ -5,7 +5,7 @@ import FilterBar from "@/components/FilterBar";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
+    <main className="flex min-h-screen flex-col items-center justify-center md:p-24 sm:p-0.5 mt-28 sm:mt-28 md:mt-0">
       <h1 className="text-6xl font-bold mb-1 text-[#2b2a29]">
         <AnimText text={"Careers"} />
       </h1>

@@ -104,14 +104,12 @@ export default function Job({ project, index }: JobProps) {
         },
       })
       .then(() => {
-        //go to the page called job-page
         router.push(`/job-page/${project.id}`, undefined, { scroll: false });
       });
   };
 
   return (
     <div className="relative w-full cursor-pointer overflow-hidden group">
-      {/* Content Container */}
       <motion.div
         ref={linkRef}
         className="relative w-full cursor-pointer py-4 overflow-hidden"
@@ -120,7 +118,6 @@ export default function Job({ project, index }: JobProps) {
         onClick={handleClick}
         style={{ backgroundColor: bg }}
       >
-        {/* Animated Background Layer */}
         <motion.div
           className="bg-riotred z-0"
           initial={{
@@ -139,12 +136,12 @@ export default function Job({ project, index }: JobProps) {
           }}
         />
 
-        {/* Content Grid - Mobile: 2 cols, Desktop: 6 cols */}
+        {/* Content Grid - Mobile: centered 2 cols, Desktop: 6 cols */}
         <div className="grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-8 items-center relative z-10 px-2 md:px-24">
-          {/* Project Name - Takes 3 columns */}
-          <div className="col-span-2 md:col-span-3">
+          {/* Project Name - Takes 1 column on mobile, 3 on desktop */}
+          <div className="col-span-1 md:col-span-3 text-center md:text-left">
             <motion.div
-              className="group-hover:text-black transition-colors duration-200 overflow-hidden "
+              className="group-hover:text-black transition-colors duration-200 overflow-hidden"
               animate={titleControls}
             >
               <AnimText
@@ -189,8 +186,8 @@ export default function Job({ project, index }: JobProps) {
             </div>
           </div>
 
-          {/* location - 1 column */}
-          <div className="col-span-1 text-right">
+          {/* Location - 1 column, centered on mobile, right-aligned on desktop */}
+          <div className="col-span-1 text-center md:text-right">
             <motion.div
               className={`${
                 isExpanded
