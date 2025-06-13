@@ -79,7 +79,7 @@ export default function Job({ project, index }: JobProps) {
     const bounds = linkRef.current.getBoundingClientRect();
 
     document.body.style.pointerEvents = "none";
-    linkRef.current.style.zIndex = "999999";
+    linkRef.current.style.zIndex = "11";
 
     bgControls.set({
       top: bounds.top,
