@@ -62,7 +62,7 @@ export default function Page({ job }: { job: JobType }) {
       </div>
 
       {/* Responsive content section */}
-      <div className="bg-gray-100 text-gray-800 p-4 sm:p-6 md:p-8 lg:p-16 xl:p-24">
+      <div className="bg-background text-gray-800 p-4 sm:p-6 md:p-8 lg:p-16 xl:p-24">
         <div className="max-w-4xl mx-auto">
           <section className="mb-8 sm:mb-10 md:mb-12">
             <h2 className="text-2xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-5 md:mb-6">
