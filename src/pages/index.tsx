@@ -23,8 +23,9 @@ export default function Home() {
       ))}
       <motion.div
         className="fixed inset-0 flex items-center justify-center bg-riotred z-50"
-        initial={{ y: 0 }}
-        animate={{ y: "-100%" }}
+        initial={{ scaleY: 1 }}
+        animate={{ scaleY: 0 }}
+        // style={{originY}}
         transition={{ duration: 1, delay: 0.2, ease: [0.76, 0, 0.24, 1] }}
       ></motion.div>
     </main>
