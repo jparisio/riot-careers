@@ -38,7 +38,7 @@ export default function Page({ job }: { job: JobType }) {
     };
   }, [router.events, lenis]);
 
-  const [hovered, setHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <>
@@ -156,27 +156,25 @@ export default function Page({ job }: { job: JobType }) {
           </section>
         </div>
 
-        <div className="w-full flex items-center justify-center flex-col mt-22">
+        <div className="w-full flex items-center justify-center flex-col mt-12 sm:mt-16 md:mt-20 lg:mt-22">
           <button
-            className="relative rounded-4xl p-4 bg-riotred text-background w-1/4 overflow-hidden"
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
+            className="relative rounded-4xl p-4 bg-riotred text-background  w-2/4 overflow-hidden text-sm sm:text-base md:text-lg font-medium"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           >
-            {/* Sliding black div */}
+            {/* Sliding black background */}
             <motion.div
-              className="absolute inset-x- bottom-0 bg-black h-24 w-180%"
-              initial={{ y: "100%", rotate: 0 }}
-              animate={{
-                y: hovered ? "10%" : "100%",
-                rotate: hovered ? 5 : 0,
-              }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="absolute inset-0 bg-black"
+              initial={{ y: "100%" }}
+              animate={{ y: isHovered ? "0%" : "100%" }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
             />
 
             {/* Button text - keep it above the sliding div */}
             <span className="relative z-10">/ Apply</span>
           </button>
-          <p className="text-xs text-foreground mt-4">
+
+          <p className="text-xs sm:text-sm text-gray-600 mt-3 sm:mt-4 text-center px-4 max-w-md">
             (honestly dont bother applying unless u go to uwaterloo)
           </p>
         </div>
