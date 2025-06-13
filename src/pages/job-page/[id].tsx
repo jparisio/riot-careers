@@ -5,6 +5,7 @@ import jobs from "@/data/jobs.json";
 import JobType from "@/types/job";
 import AnimText from "@/components/AnimText";
 import { useLenis } from "@/context/LenisProvider";
+import Image from "next/image";
 
 export async function getStaticPaths() {
   return {
@@ -59,6 +60,18 @@ export default function Page({ job }: { job: JobType }) {
             offset={0.4}
           />
         </p>
+
+        <motion.img
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.75, delay: 0.3 }}
+          exit={{ opacity: 0, y: 20 }}
+          src="/riot-sketch.jpg"
+          alt="Riot Games Logo"
+          width={800}
+          height={800}
+          className="absolute right-[-10rem] bottom-0 m-auto mix-blend-multiply"
+        />
       </div>
 
       {/* Responsive content section */}
