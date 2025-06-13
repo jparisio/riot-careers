@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import jobs from "@/data/jobs.json";
 import JobType from "@/types/job";
@@ -36,6 +37,8 @@ export default function Page({ job }: { job: JobType }) {
       router.events.off("routeChangeStart", handleRouteChangeStart);
     };
   }, [router.events, lenis]);
+
+  const [hovered, setHovered] = useState(false);
 
   return (
     <>
@@ -153,12 +156,27 @@ export default function Page({ job }: { job: JobType }) {
           </section>
         </div>
 
-        {/* Responsive button section */}
-        <div className="w-full flex items-center justify-center flex-col mt-12 sm:mt-16 md:mt-20 lg:mt-22">
-          <button className="rounded-4xl py-4 px-6 sm:py-6 sm:px-8 bg-riotred text-background w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/4 overflow-hidden text-sm sm:text-base md:text-lg font-medium">
-            / Apply
+        <div className="w-full flex items-center justify-center flex-col mt-22">
+          <button
+            className="relative rounded-4xl p-4 bg-riotred text-background w-1/4 overflow-hidden"
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+          >
+            {/* Sliding black div */}
+            <motion.div
+              className="absolute inset-x- bottom-0 bg-black h-24 w-180%"
+              initial={{ y: "100%", rotate: 0 }}
+              animate={{
+                y: hovered ? "10%" : "100%",
+                rotate: hovered ? 5 : 0,
+              }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            />
+
+            {/* Button text - keep it above the sliding div */}
+            <span className="relative z-10">/ Apply</span>
           </button>
-          <p className="text-xs sm:text-sm text-gray-600 mt-3 sm:mt-4 text-center px-4 max-w-md">
+          <p className="text-xs text-foreground mt-4">
             (honestly dont bother applying unless u go to uwaterloo)
           </p>
         </div>
