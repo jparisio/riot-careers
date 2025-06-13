@@ -66,7 +66,7 @@ export default function Page({ job }: { job: JobType }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, delay: 0.3 }}
           exit={{ opacity: 0 }}
-          src="/riot-sketch.jpg"
+          src="/riot-sketch.webp"
           alt="Riot Games Logo"
           width={800}
           height={800}
