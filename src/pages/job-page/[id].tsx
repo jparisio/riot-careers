@@ -44,17 +44,17 @@ export default function Page({ job }: { job: JobType }) {
   return (
     <>
       {/* Responsive header */}
-      <div className="flex flex-col items-start justify-center min-h-screen bg-riotred text-left p-4 sm:p-6 md:p-8 lg:p-16">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 text-foreground leading-tight">
+      <div className="relative flex flex-col items-start justify-center min-h-screen bg-riotred text-left p-4 sm:p-6 md:p-8 lg:p-16 overflow-hidden">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 text-foreground leading-tight relative z-10">
           <AnimText text={job.project.toUpperCase()} offset={0.2} />
         </h1>
-        <h3 className="text-sm sm:text-base md:text-lg font-bold text-foreground">
+        <h3 className="text-sm sm:text-base md:text-lg font-bold text-foreground relative z-10">
           <AnimText text={job.location.toUpperCase()} offset={0.3} />
         </h3>
-        <h3 className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 md:mb-12 font-bold text-foreground">
+        <h3 className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 md:mb-12 font-bold text-foreground relative z-10">
           <AnimText text={`JOB ID: REQ${job.id}`} offset={0.35} />
         </h3>
-        <p className="text-sm sm:text-base md:text-lg text-foreground max-w-full sm:max-w-2xl md:max-w-3xl">
+        <p className="text-sm sm:text-base md:text-lg text-foreground max-w-full sm:max-w-2xl md:max-w-3xl relative z-10">
           <AnimText
             text="Join our passionate team of innovators and engineers to help shape the future of gaming through cutting-edge technology, creative collaboration, and a relentless drive to deliver unforgettable experiences."
             offset={0.4}
@@ -73,7 +73,7 @@ export default function Page({ job }: { job: JobType }) {
           alt="Riot Games Logo"
           width={800}
           height={800}
-          className="absolute right-[-10rem] bottom-0 m-auto mix-blend-multiply"
+          className="absolute right-[-10rem] bottom-0 mix-blend-multiply pointer-events-none sm:block"
         />
       </div>
 
