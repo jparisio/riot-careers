@@ -146,7 +146,7 @@ export default function Job({ project, index }: JobProps) {
             >
               <AnimText
                 text={project.project}
-                offset={0.1}
+                offset={0.7}
                 extraClass="font-medium text-sm md:text-base font-semibold"
               />
             </motion.div>
@@ -163,7 +163,7 @@ export default function Job({ project, index }: JobProps) {
             >
               <AnimText
                 text={project.category}
-                offset={0.15}
+                offset={0.75}
                 extraClass="whitespace-nowrap"
               />
             </div>
@@ -180,7 +180,7 @@ export default function Job({ project, index }: JobProps) {
             >
               <AnimText
                 text={project.client}
-                offset={0.2}
+                offset={0.7}
                 extraClass="whitespace-nowrap"
               />
             </div>
@@ -198,7 +198,7 @@ export default function Job({ project, index }: JobProps) {
             >
               <AnimText
                 text={project.location}
-                offset={0.25}
+                offset={0.75}
                 extraClass="text-sm md:text-base"
               />
             </motion.div>
