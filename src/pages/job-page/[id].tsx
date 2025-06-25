@@ -30,7 +30,7 @@ export default function Page({ job }: { job: JobType }) {
 
     const handleRouteChangeStart = () => {
       // lenis.stop();
-      lenis.scrollTo(0);
+      lenis.scrollTo(0, { lock: true });
     };
 
     router.events.on("routeChangeStart", handleRouteChangeStart);
