@@ -28,11 +28,12 @@ export default function Home() {
       {jobs.map((job, index) => (
         <Job key={job.id} project={job} index={index} />
       ))}
+      {/* Intro animation overlay */}
       <motion.div
         className="fixed inset-0 flex items-center justify-center bg-riotred z-50"
         initial={{ scaleY: 1 }}
         animate={{ scaleY: 0 }}
-        // style={{originY}}
+        style={{ originY: 0 }}
         transition={{ duration: 1, delay: 0.2, ease: [0.76, 0, 0.24, 1] }}
       ></motion.div>
     </main>
